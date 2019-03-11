@@ -23,10 +23,7 @@ Installation
 ============
 
 1. change the first line of setup.py to point to the directory of your installation of python
-2. run setup.py
-
-Note: This will only install smartcashrpc. If you also want to install jsonrpc to preserve
-backwards compatibility, you have to replace 'smartcashrpc' with 'jsonrpc' in setup.py and run it again.
+2. run python3 setup.py install
 
 Or simply install the library using pip::
 
@@ -39,7 +36,7 @@ Example
     from smartcashrpc.authproxy import AuthServiceProxy, JSONRPCException
 
     # rpc_user and rpc_password are set in the smartcash.conf file
-    rpc_connection = AuthServiceProxy("http://%s:%s@127.0.0.1:8332"%(rpc_user, rpc_password))
+    rpc_connection = AuthServiceProxy("http://%s:%s@127.0.0.1:9679"%(rpc_user, rpc_password))
     best_block_hash = rpc_connection.getbestblockhash()
     print(rpc_connection.getblock(best_block_hash))
 
@@ -60,7 +57,7 @@ Logging all RPC calls to stderr
     logging.basicConfig()
     logging.getLogger("smartcashRPC").setLevel(logging.DEBUG)
 
-    rpc_connection = AuthServiceProxy("http://%s:%s@127.0.0.1:8332"%(rpc_user, rpc_password))
+    rpc_connection = AuthServiceProxy("http://%s:%s@127.0.0.1:9679"%(rpc_user, rpc_password))
     print(rpc_connection.getinfo())
 
 Produces output on stderr like

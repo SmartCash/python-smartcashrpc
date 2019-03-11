@@ -12,7 +12,7 @@ setup(
     maintainer='Leandro Reinaux',
     maintainer_email='<leoreinaux@gmail.com>',
     url='http://www.github.com/leoreinaux/python-smartcashrpc',
-    packages=['smartcashrpc'],
+    packages=['smartcashrpc','jsonrpc'],
     classifiers=[
         'License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL)', 'Operating System :: OS Independent'
     ]
